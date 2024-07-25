@@ -1,5 +1,5 @@
 {
-    "name": "flamix/bitrix24-orders-integration",
+    "name": "flamix/magento-bitrix24-orders-integration",
     "description": "Flamix: Integration of Magento orders with Bitrix24",
     "require": {
         "php": ">=7.4",
