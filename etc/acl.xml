@@ -3,7 +3,11 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Flamix_Bitrix24OrdersIntegration::diagnostics" title="Diagnostics" sortOrder="10"/>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Flamix_Bitrix24OrdersIntegration::integration" title="Integration" sortOrder="10"/>
+                    </resource>
+                </resource>
             </resource>
         </resources>
     </acl>

@@ -2,15 +2,15 @@
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui/etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">flamix_diagnostics_form.flamix_diagnostics_form_data_source</item>
+            <item name="provider" xsi:type="string">flamix_integration_form.flamix_integration_form_data_source</item>
         </item>
         <item name="label" xsi:type="string" translate="true">Diagnostics</item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
     </argument>
-    <dataSource name="flamix_diagnostics_form_data_source">
+    <dataSource name="flamix_integration_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Flamix\Bitrix24OrdersIntegration\Ui\DataProvider\Integration\DataProvider</argument>
-            <argument name="name" xsi:type="string">flamix_diagnostics_form_data_source</argument>
+            <argument name="name" xsi:type="string">flamix_integration_form_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
         </argument>
@@ -28,9 +28,7 @@
             </argument>
         </field>
         <container name="custom_html_container" label="Custom HTML" sortOrder="20">
-            <htmlContent name="custom_html">
-                <argument name="block" xsi:type="string">Flamix\Bitrix24OrdersIntegration\Block\Adminhtml\CustomHtml</argument>
-            </htmlContent>
+            <block class="Flamix\Bitrix24OrdersIntegration\Block\Adminhtml\CustomHtml" name="custom_html"/>
         </container>
     </fieldset>
 </form>

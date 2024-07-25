@@ -30,6 +30,7 @@ class DataProvider extends AbstractDataProvider
             $this->loadedData[$item->getId()] = $item->getData();
         }
 
+        // Добавьте свои данные для отображения в форме
         $this->loadedData[0]['sample_field'] = 'Sample Data';
 
         return $this->loadedData;
