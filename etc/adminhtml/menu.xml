@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Menu/etc/menu.xsd">
+    <menu>
+        <add id="Flamix_Bitrix24OrdersIntegration::diagnostics" title="Diagnostics" module="Flamix_Bitrix24OrdersIntegration" sortOrder="10" parent="Magento_Backend::content" action="bitrix24ordersintegration/diagnostics/index" resource="Flamix_Bitrix24OrdersIntegration::diagnostics"/>
+    </menu>
+</config>
