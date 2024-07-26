@@ -3,7 +3,9 @@
     "description": "Flamix: Integration of Magento orders with Bitrix24",
     "require": {
         "php": ">=7.4",
-        "magento/framework": ">=102"
+        "magento/framework": ">=102",
+        "flamix/plugin-helpers": "dev-main",
+        "flamix/b24-lead": "dev-master"
     },
     "type": "magento2-module",
     "version": "1.0.0",
