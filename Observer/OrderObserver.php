@@ -73,6 +73,7 @@ class OrderObserver implements ObserverInterface
     private function fields(array $fields, array $shipping): array
     {
         $fields = [
+            'HOSTNAME' => $_SERVER['SERVER_NAME'],
             'ORDER_ID' => $fields['increment_id'],
             'EMAIL' => $shipping['customer_email'] ?? null,
             'PHONE' => $fields['telephone'] ?? null,
