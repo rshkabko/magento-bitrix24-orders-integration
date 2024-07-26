@@ -10,7 +10,9 @@ class DataProvider extends AbstractDataProvider
         return [
             'items' => [
                 [
-                    'sample_field' => 'Sample Data'
+                    'domain' => 'Domain',
+                    'api' => 'Api',
+                    'find' => 'Find',
                 ]
             ],
             'totalRecords' => 1

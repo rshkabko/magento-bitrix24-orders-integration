@@ -32,17 +32,47 @@ class Form extends Template
             ['legend' => __('Integration Settings'), 'class' => 'fieldset-wide']
         );
 
-        $sampleFieldValue = $this->scopeConfig->getValue('flamix_integration/general/sample_field', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $domain = $this->scopeConfig->getValue('flamix_integration/general/domain', \Magento\Store\Model\ScopeInterface::SCOPE_STORE, null);
+        $api = $this->scopeConfig->getValue('flamix_integration/general/api', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $find = $this->scopeConfig->getValue('flamix_integration/general/find', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
 
         $fieldset->addField(
-            'sample_field',
+            'domain',
             'text',
             [
-                'name' => 'sample_field',
-                'label' => __('Sample Field'),
-                'title' => __('Sample Field'),
+                'name' => 'domain',
+                'label' => __('Domain'),
+                'title' => __('Domain'),
                 'required' => true,
-                'value' => $sampleFieldValue,
+                'value' => $domain,
+            ]
+        );
+
+        $fieldset->addField(
+            'api',
+            'text',
+            [
+                'name' => 'api',
+                'label' => __('Api'),
+                'title' => __('Api'),
+                'required' => true,
+                'value' => $api,
+            ]
+        );
+
+        $fieldset->addField(
+            'find',
+            'select',
+            [
+                'name' => 'find',
+                'label' => __('Find By'),
+                'title' => __('Find By'),
+                'values' => [
+                    ['value' => 'disable', 'label' => __('Disable')],
+                    ['value' => 'sku', 'label' => __('SKU')],
+                    ['value' => 'name', 'label' => __('Name')],
+                ],
+                'value' => $find,
             ]
         );
 
