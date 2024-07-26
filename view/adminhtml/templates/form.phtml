@@ -1,0 +1,12 @@
+<?php if ($block->getMessagesBlock()): ?>
+    <?php echo $block->getMessagesBlock()->toHtml(); ?>
+<?php endif; ?>
+<form action="<?php echo $block->getUrl('*/*/index'); ?>" method="post">
+    <?php echo $block->getBlockHtml('formkey'); ?>
+    <?php echo $block->getFormHtml(); ?>
+    <div class="actions">
+        <button type="submit" class="action-save primary">
+            <span><?php echo __('Save'); ?></span>
+        </button>
+    </div>
+</form>

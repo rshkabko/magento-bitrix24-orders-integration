@@ -2,7 +2,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <uiComponent name="flamix_diagnostics_form"/>
+            <block class="Flamix\Bitrix24OrdersIntegration\Block\Adminhtml\Form" name="integration_form" template="Flamix_Bitrix24OrdersIntegration::form.phtml"/>
+            <block class="Flamix\Bitrix24OrdersIntegration\Block\Adminhtml\Diagnostics" name="custom_html_block"/>
         </referenceContainer>
     </body>
 </page>
