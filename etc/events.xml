@@ -3,4 +3,7 @@
     <event name="sales_order_place_after">
         <observer name="flamix_bitrix24ordersintegration_order_observer" instance="Flamix\Bitrix24OrdersIntegration\Observer\OrderObserver" />
     </event>
+    <event name="controller_action_postdispatch">
+        <observer name="flamix_bitrix24ordersintegration_page_observer" instance="Flamix\Bitrix24OrdersIntegration\Observer\PageObserver" />
+    </event>
 </config>
