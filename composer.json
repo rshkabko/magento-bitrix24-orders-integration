@@ -12,7 +12,7 @@
     "autoload": {
         "files": [
             "registration.php",
-            "utm.php",
+            "utm.php"
         ],
         "psr-4": {
             "Flamix\\Bitrix24OrdersIntegration\\": ""
