@@ -11,8 +11,7 @@
     "version": "1.0.0",
     "autoload": {
         "files": [
-            "registration.php",
-            "utm.php"
+            "registration.php"
         ],
         "psr-4": {
             "Flamix\\Bitrix24OrdersIntegration\\": ""

@@ -4,3 +4,6 @@
     'Flamix_Bitrix24OrdersIntegration',
     __DIR__
 );
+
+// Init UTM
+\Flamix\Bitrix24\SmartUTM::init();
