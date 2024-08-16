@@ -38,7 +38,8 @@ class Index extends Action
             $postData = $this->getRequest()->getPostValue();
 
             if (isset($postData['domain'])) {
-                $this->configWriter->save('flamix_integration/general/domain', $postData['domain']);
+                $domain = \Flamix\Plugin\General\Helpers::parseDomain($postData['domain']);
+                $this->configWriter->save('flamix_integration/general/domain', $domain);
             }
             if (isset($postData['api'])) {
                 $this->configWriter->save('flamix_integration/general/api', $postData['api']);
