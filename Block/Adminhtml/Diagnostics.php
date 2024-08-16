@@ -45,7 +45,12 @@ class Diagnostics extends Template
     {
         $domain = $this->scopeConfig->getValue('flamix_integration/general/domain', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
         $api = $this->scopeConfig->getValue('flamix_integration/general/api', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
-        $status = Flamix24Lead::getInstance()->changeSubDomain($this->getSubDomain())->setDomain($domain)->setToken($api)->send(['status' => 'check'], 'check');
+
+        try {
+            $status = Flamix24Lead::getInstance()->changeSubDomain($this->getSubDomain())->setDomain($domain)->setToken($api)->send(['status' => 'check'], 'check');
+        } catch (\Exception $e) {
+            $status = ['msg' => $e->getMessage()];
+        }
 
         if (($status['status'] ?? 'error') === 'success') {
             return true;
